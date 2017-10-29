@@ -1,0 +1,30 @@
+pipe
+fork
+dup each end of pipe
+execvp
+
+& don't wait - continue to the next command
+
+Read from right to left
+Read until a delimiter is found
+
+
+keep a counter of where in argvp the program is at
+
+read from argvp until a pipe is found
+fork the running process
+duplicate the standard output if a carrot is there
+
+//j is the count of how many arguments were sent in
+j = makeargv(" \nls -l / | cat DupExecDemo.c", "\t \n", &ExecVectors
+
+//A Null character has to be added after a command
+	ls -l / NULL
+
+
+ctrl + c should not work
+
+pipe is a system call
+
+
+

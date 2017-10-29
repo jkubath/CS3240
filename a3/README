@@ -1,0 +1,48 @@
+CS 3240, Fall 2017,
+Assignment 3 – Write a Shell
+Due October 31
+
+You are to program your own shell. The minimum functionality is that it must
+
+a)Execute an arbitrarary (i.e unlimited) number of piped commands on a single command line
+b)Handle redirection for both first and last command using the < and > symbols respectively
+c)Have two built in commands: umask and cd
+d)Allow backgrounding (a final ‘&’ which causes the shell to ask for another command. 
+e)Handle (disable) CTRL-C from the keyboard (perferably also echoing a humorous message of sorts)
+
+You have been provided a good number of examples and explanation of the key system calls:
+fork(), exec(), dup2() and pipe() , as well as instances of the wait() family of calls. You have also
+been provided makeargv() which takes care of tokenizing the command line into a form ready
+for execvp().
+
+This assignment is a kind of rite of passage, perhaps only because the thinking and coding is
+somewhat different since fork() causes you to look at a single piece of source with two different
+viewpoints. The amount of code proves to not be excessive. The examples you have seen should
+actually make things relatively understandable since process communication and structure is
+what we are really thinking about here.
+
+Some tips:
+
+You will do well to do some planning on overall organization of the pieces you have seen.
+An orderly attack as you add functionality will help. In particular, thinking through how
+an arbitrary number of pipes can be implemented amuses me.
+
+Have some toy programs to work with. You have seen a little thing that upper cases the
+stream of characters already. It is useful for testing to have 2 or 3 pipeworthy programs at
+the ready.
+
+gdb can be used and when forking either ‘follow’ the child or stay with the parent.
+A command file that can be redirected into your shell can save key strokes. On each line
+of the file is what the user (you) would otherwise type.
+
+Special Extra Bonus Features (SEBF)
+1) Add something kewl. 'History’ is a nice feature. A ‘tee’ capability exists in some shells.  
+2) Manage makeargv() so you have no valgrind errors. 
+
+As before push your work back to the jazz repo. PUSH
+
+	- Source code
+	- Any headers of your own 
+	- A makefile with the arguments '-Wall -Wpedantic -std=c99 -g -o (whatever awesome shell name you chose)'
+	- Any 'toy' programs you make (source code)
+	- Your shell executable (made with make) should be the ONLY EXECUTABLE FILE IN YOUR DIRECTORY
