@@ -1,0 +1,90 @@
+Script started on Wed Sep 13 15:43:57 2017
+[?1034hbash-3.2$ make test
+./3240Assignment0 < test-input.txt
+Reading / Sorting Song File
+Enter a Song Title (ZZZ to stop)
+
+Song not found.
+Song         - "Deep Sea Creature"
+Album        - "Call of the Mastodon"
+Artist       - "Mastodon"
+Duration     - 280.215057
+Release Year - 2001
+Hotttnesss   - 0.597641
+
+Song         - "Stand By Me"
+Album        - "Made In England"
+Artist       - "Atomic Rooster"
+Duration     - 203.310577
+Release Year - 1972
+Hotttnesss   - 0.000000
+
+Song         - "Ralph's Rhapsody"
+Album        - "The Best Of Ray Lynch"
+Artist       - "Ray Lynch"
+Duration     - 283.741577
+Release Year - 1998
+Hotttnesss   - 0.547953
+
+Song         - "Don't Mess With the IRS"
+Album        - "Love Death & Taxes"
+Artist       - "Dr. Elmo"
+Duration     - 159.320358
+Release Year - 0
+Hotttnesss   - 0.000000
+
+
+Song not found.
+Song         - ""
+Album        - "Puce de luxe"
+Artist       - "Sébastien Roch"
+Duration     - 184.084442
+Release Year - 0
+Hotttnesss   - 0.000000
+
+Song         - "Too Many Choices"
+Album        - "Personal Business (Explicit)"
+Artist       - "Bad Azz"
+Duration     - 285.935883
+Release Year - 0
+Hotttnesss   - 0.405116
+
+Song         - "These Days"
+Album        - "Can't Fight Robots"
+Artist       - "Take It Back!"
+Duration     - 204.904037
+Release Year - 2008
+Hotttnesss   - 0.447136
+
+Song         - "Armageddon's Raid"
+Album        - "Bondage Goat Zombie"
+Artist       - "Belphegor"
+Duration     - 308.766876
+Release Year - 2008
+Hotttnesss   - 0.624840
+
+Song         - "Single Ladies (Put A Ring On It)"
+Album        - "Single Ladies (Put A Ring On It) - Dance Remixes"
+Artist       - "Beyoncé"
+Duration     - 466.050171
+Release Year - 2008
+Hotttnesss   - 0.000000
+
+Song         - "Get On Top (Album Version)"
+Album        - "Californication"
+Artist       - "Red Hot Chili Peppers"
+Duration     - 198.059952
+Release Year - 1999
+Hotttnesss   - 0.000000
+
+Song         - "Rudeboy"
+Album        - "Aswad vs. The Rhythm Riders"
+Artist       - "Aswad"
+Duration     - 258.428925
+Release Year - 0
+Hotttnesss   - 0.000000
+
+bash-3.2$ exit
+exit
+
+Script done on Wed Sep 13 15:44:08 2017
