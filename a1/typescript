@@ -1,0 +1,127 @@
+Script started on Tue Sep 26 13:16:05 2017
+[?1034hbash-3.2$ make all
+gcc -Wall -Wpedantic -std=c99 -g BuildDataBase.c error.c -o BuildDataBase
+gcc -Wall -Wpedantic -std=c99 -g UseDataBase.c error.c -o UseDataBase
+bash-3.2$ make use
+./UseDataBase < test-input.txt
+Enter a Song Title (ZZZ to stop)
+warning: this program uses gets(), which is unsafe.
+You entered: "We're Not Gonna Bow"
+Name         - "We're Not Gonna Bow"
+Artist       - "Jeff And Sheri Easter"
+Album Name   - "Ordinary Day"
+Release Year - 0
+Duration     - 222.928528
+Hotttnesss   - 0.240821
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Deep Sea Creature"
+Name         - "Deep Sea Creature"
+Artist       - "Mastodon"
+Album Name   - "Call of the Mastodon"
+Release Year - 2001
+Duration     - 280.215057
+Hotttnesss   - 0.597641
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Stand By Me"
+Name         - "Stand By Me"
+Artist       - "Atomic Rooster"
+Album Name   - "Made In England"
+Release Year - 1972
+Duration     - 203.310577
+Hotttnesss   - 0.000000
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Ralph's Rhapsody"
+Name         - "Ralph's Rhapsody"
+Artist       - "Ray Lynch"
+Album Name   - "The Best Of Ray Lynch"
+Release Year - 1998
+Duration     - 283.741577
+Hotttnesss   - 0.547953
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Don't Mess With the IRS"
+Name         - "Don't Mess With the IRS"
+Artist       - "Dr. Elmo"
+Album Name   - "Love Death & Taxes"
+Release Year - 0
+Duration     - 159.320358
+Hotttnesss   - 0.000000
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Dr. Elmo's Twisted Christmas"
+
+Song not found.
+
+Enter a Song Title (ZZZ to stop)
+You entered: ""
+Name         - ""
+Artist       - "Sébastien Roch"
+Album Name   - "Puce de luxe"
+Release Year - 0
+Duration     - 184.084442
+Hotttnesss   - 0.000000
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Too Many Choices"
+Name         - "Too Many Choices"
+Artist       - "Bad Azz"
+Album Name   - "Personal Business (Explicit)"
+Release Year - 0
+Duration     - 285.935883
+Hotttnesss   - 0.405116
+
+Enter a Song Title (ZZZ to stop)
+You entered: "These Days"
+Name         - "These Days"
+Artist       - "Take It Back!"
+Album Name   - "Can't Fight Robots"
+Release Year - 2008
+Duration     - 204.904037
+Hotttnesss   - 0.447136
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Armageddon's Raid"
+Name         - "Armageddon's Raid"
+Artist       - "Belphegor"
+Album Name   - "Bondage Goat Zombie"
+Release Year - 2008
+Duration     - 308.766876
+Hotttnesss   - 0.624840
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Single Ladies (Put A Ring On It)"
+Name         - "Single Ladies (Put A Ring On It)"
+Artist       - "Beyoncé"
+Album Name   - "Single Ladies (Put A Ring On It) - Dance Remixes"
+Release Year - 2008
+Duration     - 466.050171
+Hotttnesss   - 0.000000
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Get On Top (Album Version)"
+Name         - "Get On Top (Album Version)"
+Artist       - "Red Hot Chili Peppers"
+Album Name   - "Californication"
+Release Year - 1999
+Duration     - 198.059952
+Hotttnesss   - 0.000000
+
+Enter a Song Title (ZZZ to stop)
+You entered: "Rudeboy"
+Name         - "Rudeboy"
+Artist       - "Aswad"
+Album Name   - "Aswad vs. The Rhythm Riders"
+Release Year - 0
+Duration     - 258.428925
+Hotttnesss   - 0.000000
+
+Enter a Song Title (ZZZ to stop)
+You entered: "ZZZ"
+Done Searching
+bash-3.2$ exit
+exit
+
+Script done on Tue Sep 26 13:16:12 2017

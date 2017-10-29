@@ -1,0 +1,9 @@
+a new binary file to hold only needed information
+  the directory for the information
+    key: offset
+      The data is written at some offset in the file
+      off_t* = lseek(fd, 0, SEEK_CUR)
+
+      write(fd, &x, sizeof(double)) - read a double
+      read(fd, &x, sizeof(double)) - read and store in a double
+        if read == -1
