@@ -1,0 +1,31 @@
+Assignment 6 --  A simple server
+
+You are to write a file server which will handle GET requests consistent with HTTP1.2 
+
+You must do that by creating a socket that the client can use. You must handle multiple clients, each provided a thread. 
+
+Media types you must handle include mp3, and jpeg ... Can you extend that to video ? 
+
+A thread pool (skeleton of which is provided) earns bonus points. 
+
+This is due at final exam. 
+
+I have provided three media items ... a koala, an mp3 and a cartoon that is funny. 
+
+This is a quick and dirty README. I have provided an example of client , server code previously but because you can't say for sure, i provide it here as well. 
+
+BUT THERE"S MORE !
+
+Also in the repo is *magic*. 
+
+Magic.c is a piece of code which will take (as a command line argument) a path/filename and return the content type field that needs to be provided in the response header to the GET request. 
+Of course, you must first install magic using 
+
+sudo apt-get install libmagic-dev 
+
+and then use the magic functions such as the magic cookie function magic_open() to get the mime type for usage in response header. 
+
+Note that you are installing the magic library which must be loaded with -lmagic.
+
+Please make your code executable by <command> <portnumber>, so that I can specify the port to bind the socket to on the command line
+'./server 3240' should open a http server that runs on port 3240
