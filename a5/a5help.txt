@@ -1,0 +1,6 @@
+void* sbrk(increment) - moves the breakpoint the given increment bytes
+	when 0 is sent in to find the current position
+
+void * my_malloc(size_t) - allocate the given size t on the heap
+void my_free(void *) - address with no data type
+

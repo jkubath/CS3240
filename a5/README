@@ -1,0 +1,56 @@
+CS 3240 Fall 2017
+A5: My Lovable Malloc
+
+As I realize you are all extremely eager to start your next assignment, we will now begin writing our own malloc.
+
+By now, you are probably (hopefully) quite familiar with the malloc library (and it's free counterpart).
+While it's easy to think of malloc as being a system call, it is actually a library that maintains it's own
+data structure, and if necessary, makes use the the sbrk() system call.
+
+You will write two functions that can be loaded from a given header file you have been given, titled "my_malloc.h".
+These functions are:
+
+void * my_malloc(size_t);
+void my_free(void *);
+
+Note that "void *" is an address that has no data type. my_malloc() will allocate the given size_t amount of memory on the heap,
+and return it's starting address. my_free() will make the address passed into the parameter available to another call to my_malloc.
+It will also be necessary to combine contiguous areas of memory, and split them when needed.
+
+In order to do this, you will have to maintain your own heap metadata, which you can do by using structs called "Free Blocks".
+An example of a free block is as follows:
+
+struct freeblock {
+	void * address;
+	size_t length;
+	struct freeblock * next;
+	int isFree;
+};
+
+address stores the beginning address of the block. length stores how much memory is allocated to it. next is a pointer to the next
+freeblock struct in memory, and isFree is a boolean-like integer that determines whether or not the freeblock is able to be used
+by my_malloc.
+
+When there is a call to my_malloc, you will go through each freeblock in your linked list, checking whether or not the list is free
+and large enough to contain the data you are allocating memory for. If it is, then you are to 'split' the free block into the allocated
+memory and any additional freespace. For example, if I have an address that is free to be used by 4096 bytes, and I want to my_malloc(256),
+I will use the current address to store the 256 bytes, update the freeblock metadata, and then create a new freeblock that will contain
+metadata for the remaining space.
+
+You may use either a "first fit" or "best fit" algorithm when allocating memory in freeblocks, although best fit is clearly the best choice.
+
+When calling my_free(), you will search your freeblock linked list for the particular address space given, and free that freeblock
+(e.g. Make that block's isFree 1, and update other metadata). You will then call a method to combine adjacent free areas of memory.
+
+For instance, If I have (my_block.isFree==1 && my_block->next.isFree==1), I will combine my_block and my_block->next into one freeblock,
+and update my linked list.
+
+If there are no free blocks available that are big enough when a call to my_malloc is made, the sbrk() system call can be used to 
+expand the "break point" of the heap. A call sbrk(0) returns the current address of the break point, and sbrk(64) will expand it by 64 bytes
+You will then create a new free block.
+
+The only other area of concern is where you will store your free blocks. Remember, you can't use malloc! You can solve this problem any way
+you wish, but be aware that you can't just hardcode metadata into a specific area. You best bet is dynamically allocating them in the heap
+somewhere.
+
+I have also provided a sample main method that you can use to test your library.
