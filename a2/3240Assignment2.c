@@ -24,13 +24,13 @@ int main(int argc, char** argv){
   //char *tempDirectory = calloc((strlen(listPointer ->currentDirectory) + strlen(dirp -> d_name) + 1), 1);
 
   if(argc < 2){
+    printf("Invalid arguments.\n");
     printf("Invalid arguments.\t./3240Assignment2 <directory>\n");
   }
   //Valid arguments
   else {
     //Open a new directory
-    char* directory = calloc(1, 2048);
-    getcwd(director);
+    DIR *dp;
     struct stat statBuff;
     //Information from a directory
     struct dirent * dirp;
@@ -49,7 +49,7 @@ int main(int argc, char** argv){
     };
 
     //Open the directory from arguments
-    dp = opendir(argv[1]);
+    dp = opendir(".");
     if(dp == NULL){
       err_sys("%s%s\n", "No read rights - ", argv[1]);
     }
